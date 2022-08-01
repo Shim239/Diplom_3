@@ -98,11 +98,11 @@ public class TestUserProfile extends BaseTest {
     @Test
     @DisplayName("Check user is able to logout successfully")
     public void successfullyLogoutUser() {
-        final boolean cuserLoginTextDisplayed = Selenide.open(LoginPage.URL, LoginPage.class)
+        final boolean userLoginTextDisplayed = Selenide.open(LoginPage.URL, LoginPage.class)
                 .userLogin(userModel)
                 .clickProfileLinkUserLogged()
                 .clickLogoutButton()
                 .isUserLoginTextDisplayed();
-        assertTrue(cuserLoginTextDisplayed);
+        assertTrue(userLoginTextDisplayed);
     }
 }
